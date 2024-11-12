@@ -1,0 +1,72 @@
+| ID   | Nome do Produto             | Valor por Unidade/Kg | Validade     | Garantia | Estoque |
+|------|------------------------------|----------------------|-------------|----------|---------|
+| 001  | Arroz (1kg)                  | R$ 4,50             | 12/12/2024   |-         |   50    |
+| 002  | Feijão (1kg)                 | R$ 5,00             | 10/12/2024   |-         |   50    |
+| 003  | Açúcar (1kg)                 | R$ 3,20             | 15/01/2025   |-         |   50    |
+| 004  | Óleo de Soja (900ml)         | R$ 7,00             | 25/02/2025   |-         |   50    |
+| 005  | Macarrão (500g)              | R$ 3,80             | 18/12/2024   |-         |   50    |
+| 006  | Café (500g)                  | R$ 8,90             | 05/01/2025   |-         |   50    |
+| 007  | Leite (1L)                   | R$ 4,30             | 02/12/2024   |-         |   50    |
+| 008  | Sabão em pó (1kg)            | R$ 12,00            | 20/11/2025   |-         |   50    |
+| 009  | Detergente (500ml)           | R$ 2,50             | 15/03/2025   |-         |   50    |
+| 010  | Biscoito (200g)              | R$ 2,80             | 10/02/2025   |-         |   50    |
+| 011  | Frango (1kg)                 | R$ 12,00            | 11/11/2024   |-         |   50    |
+| 012  | Carne bovina (1kg)           | R$ 30,00            | 10/11/2024   |-         |   50    |
+| 013  | Banana (1kg)                 | R$ 3,50             | 13/11/2024   |-         |   50    |
+| 014  | Maçã (1kg)                   | R$ 5,00             | 14/11/2024   |-         |   50    |
+| 015  | Sabonete (unidade)           | R$ 1,50             | 15/10/2025   |-         |   50    |
+| 016  | Shampoo (400ml)              | R$ 12,00            | 28/09/2025   |-         |   50    |
+| 017  | Amaciante (2L)               | R$ 14,50            | 22/08/2025   |-         |   50    |
+| 018  | Farinha de trigo (1kg)       | R$ 4,10             | 20/02/2025   |-         |   50    |
+| 019  | Manteiga (200g)              | R$ 7,90             | 02/12/2024   |-         |   50    |
+| 020  | Queijo (1kg)                 | R$ 28,00            | 09/11/2024   |-         |   50    |
+| 021  | Microondas                   | R$ 350,00           | -            |3 meses   |   10    |
+| 022  | Ventilador                   | R$ 120,00           | -            |3 meses   |   15    |
+| 023  | Fogão 4 Bocas                | R$ 800,00           | -            |6 meses   |    5    |
+| 024  | Geladeira                    | R$ 1.800,00         | -            |12 meses  |    5    |
+| 025  | Máquina de Lavar Roupa       | R$ 1.500,00         | -            |12meses   |    5    |
+| 026  | Aspirador de Pó              | R$ 200,00           | -            |3 meses   |   10    |
+| 027  | Liquidificador               | R$ 80,00            | -            |3 meses   |   15    |
+| 028  | Batedeira                    | R$ 150,00           | -            |3 meses   |   10    |
+| 029  | Ferro de Passar              | R$ 70,00            | -            |3 meses   |   15    |
+| 030  | Secador de Cabelo            | R$ 90,00            | -            |3 meses   |   15    |
+| 031  | Televisão (32")              | R$ 900,00           | -            |6 meses   |   10    |
+| 032  | Air Fryer                    | R$ 400,00           | -            |3 meses   |   20    |
+| 033  | Cafeteira Elétrica           | R$ 120,00           | -            |3 meses   |   20    |
+| 034  | Forno Elétrico               | R$ 300,00           | -            |3 meses   |   15    |
+| 035  | Fogão de Indução             | R$ 700,00           | -            |6 meses   |    5    |
+| 036  | Lava-Louças                  | R$ 2.000,00         | -            |12meses   |   10    |
+| 037  | Purificador de Água          | R$ 350,00           | -            |3 meses   |   10    |
+| 038  | Ventilador de Teto           | R$ 200,00           | -            |3 meses   |   10    |
+| 039  | Exaustor de Cozinha          | R$ 150,00           | -            |3 meses   |   10    |
+| 040  | Torradeira                   | R$ 60,00            | -            |3 meses   |   15    |
+| 041  | Panela de Pressão            | R$ 100,00           | -            |-         |   15    |
+| 042  | Jogo de Talheres (24 pçs)    | R$ 50,00            | -            |-         |   20    |
+| 043  | Conjunto de Panelas (5 pçs)  | R$ 180,00           | -            |-         |   10    |
+| 044  | Frigideira                   | R$ 35,00            | -            |-         |   15    |
+| 045  | Colher de Pau                | R$ 5,00             | -            |-         |   50    |
+| 046  | Escorredor de Pratos         | R$ 25,00            | -            |-         |   20    |
+| 047  | Jogo de Copos (6 pçs)        | R$ 20,00            | -            |-         |   20    |
+| 048  | Tábua de Corte               | R$ 15,00            | -            |-         |   25    |
+| 049  | Rolo de Massa                | R$ 12,00            | -            |-         |   20    |
+| 050  | Ralador                      | R$ 10,00            | -            |-         |   20    |
+| 051  | Balde Plástico               | R$ 8,00             | -            |-         |   40    |
+| 052  | Rodo                         | R$ 7,00             | -            |-         |   30    |
+| 053  | Vassoura                     | R$ 10,00            | -            |-         |   30    |
+| 054  | Pá de Lixo                   | R$ 6,00             | -            |-         |   20    |
+| 055  | Esponja de Cozinha           | R$ 2,50             | -            |-         |   50    |
+| 056  | Luvas de Borracha            | R$ 5,00             | -            |-         |   50    |
+| 057  | Pano de Chão                 | R$ 3,00             | -            |-         |   50    |
+| 058  | Desinfetante (1L)            | R$ 6,00             | -            |-         |   40    |
+| 059  | Água Sanitária (2L)          | R$ 4,00             | -            |-         |   25    |
+| 060  | Multiuso Limpeza             | R$ 5,50             | -            |-         |   50    |
+| 061  | Escova Sanitária             | R$ 8,00             | -            |-         |   20    |
+| 062  | Limpador de Vidros           | R$ 7,00             | -            |-         |   20    |
+| 063  | Flanela                      | R$ 2,00             | -            |-         |   50    |
+| 064  | Porta-Detergente             | R$ 4,50             | -            |-         |   20    |
+| 065  | Pegador de Salada            | R$ 6,00             | -            |-         |   20    |
+| 066  | Conjunto de Potes de Plástico (5 pçs) | R$ 20,00   | -            |-         |   30    |
+| 067  | Escumadeira                  | R$ 3,50             | -            |-         |   20    |
+| 068  | Pegador de Massa             | R$ 4,00             | -            |-         |   20    |
+| 069  | Pincel de Cozinha            | R$ 3,00             | -            |-         |   10    |
+| 070  | Abridor de Garrafas          | R$ 2,00             | -            |-         |   20    |

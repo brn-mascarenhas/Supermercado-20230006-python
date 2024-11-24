@@ -240,12 +240,12 @@ def modify_products():
                 continue
 
             print('\nProduto encontrado:')
-            print(f'ID: {product_to_modify["ID"]}')
-            print(f'Nome: {product_to_modify["Nome"]}')
-            print(f'Valor: {product_to_modify["Valor"]}')
-            print(f'Validade: {product_to_modify["Validade"]}')
-            print(f'Garantia: {product_to_modify["Garantia"]}')
-            print(f'Estoque: {product_to_modify["Estoque"]}')
+            print(f'ID: {product_to_modify['ID']}')
+            print(f'Nome: {product_to_modify['Nome']}')
+            print(f'Valor: {product_to_modify['Valor']}')
+            print(f'Validade: {product_to_modify['Validade']}')
+            print(f'Garantia: {product_to_modify['Garantia']}')
+            print(f'Estoque: {product_to_modify['Estoque']}')
             print('-'*30)
 
             print('Alterações disponíveis')
@@ -260,22 +260,22 @@ def modify_products():
                 if modification == '1':
                     new_value = float(input('Digite o novo valor: ').strip())
                     product_to_modify['Valor'] = new_value
-                    print(f'\nValor do produto {product_to_modify["Nome"]} alterado com sucesso.')
+                    print(f'\nValor do produto {product_to_modify['Nome']} alterado com sucesso.')
 
                 elif modification == '2':
                     new_validity = input('Digite a nova validade (DD/MM/AAAA): ').strip()
                     product_to_modify['Validade'] = new_validity
-                    print(f'\nValidade do produto {product_to_modify["Nome"]} alterada com sucesso.')
+                    print(f'\nValidade do produto {product_to_modify['Nome']} alterada com sucesso.')
                 
                 elif modification == '3':
                     new_warranty = input('Digite a nova garantia em meses: ').strip()
                     product_to_modify['Garantia'] = new_warranty
-                    print(f'\nGarantia do produto {product_to_modify["Nome"]} alterada com sucesso.')
+                    print(f'\nGarantia do produto {product_to_modify['Nome']} alterada com sucesso.')
 
                 elif modification == '4':
                     new_stock = input('Digite o novo estoque: ').strip()
                     product_to_modify['Garantia'] = new_stock
-                    print(f'\nEstoque do produto {product_to_modify["Nome"]} alterado com sucesso.')
+                    print(f'\nEstoque do produto {product_to_modify['Nome']} alterado com sucesso.')
 
                 elif modification == '5':
                     continue
@@ -404,7 +404,7 @@ def open_cash_register():
     if supervisor_authentication():
         cash_register['is_open'] = False
         cash_register['current_value'] = cash_register['initial_value']
-        print(f'Caixa aberto com sucesso. Valor inicial: R${cash_register["initial_value"]:.2f}\n')
+        print(f'Caixa aberto com sucesso. Valor inicial: R${cash_register['initial_value']:.2f}\n')
     else:
         print('Autenticação de supervisor falhou. Operação não autorizada.\n')
     return_to_main_menu()

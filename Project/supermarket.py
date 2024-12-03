@@ -1,13 +1,14 @@
 import os
 from datetime import datetime
 
-cash_register = {
-    'is_open': False,
-    'initial_value': 1000.00,
-    'current_value': 0.00,
-}
-
+value = {'current_value'}
 SUPERVISOR_PASSWORD = '****'
+cash_register = {
+            'is_open': False,
+            'initial_value': 1000.00,
+            'current_value': 0.00,
+        }
+
 
 file_path = os.path.join(os.path.dirname(__file__), 'product_list.txt')
 
@@ -79,21 +80,17 @@ def show_subtitle(text):
     print(line)
     print()
 
-def supervisor_authentication():
-    '''Verifica se o usuário é supervisor'''
-    password = input('Digite a senha do supervisor: ').strip()
-    if password == SUPERVISOR_PASSWORD:
-        return True
-    else:
-        print('Senha incorreta! Operação não autorizada.\n')
-        return False
-
 def new_sale():
     '''Executa o processo de uma nova venda'''
     os.system('cls')
     show_subtitle('Nova Venda')
-    if not cash_register['is_open'] or cash_register['current_value'] == 0:
+    if not cash_register['is_open']:
         print('Caixa fechado! Abra o caixa para realizar a venda.\n')
+        return_to_main_menu()
+        return
+
+    if cash_register['current_value'] == 0:
+        print('ERRO: Sem troco no caixa.')
         return_to_main_menu()
         return
 
@@ -214,7 +211,7 @@ def modify_products():
             try:
                 new_value = float(input('Digite o valor do novo produto: ').strip())
                 new_validity = input('Digite a validade do novo produto (DD/MM/AAAA): ').strip()
-                new_warranty = input('Digite a validade do novo produto em meses: ').strip()
+                new_warranty = input('Digite a garantia do novo produto em meses: ').strip()
                 new_stock = int(input('Digite a quantidade em estoque do novo produto: ').strip())
 
                 products.append({
@@ -289,7 +286,7 @@ def modify_products():
             return_to_main_menu()
         
         else:
-            print('Opção inválida. Tente novamente.\n')
+            invalid_option()
 
 def all_products():
     '''Escolher qual sera a interação com os produtos'''
@@ -299,7 +296,7 @@ def all_products():
     elif choose == '2':
         modify_products()
     else:
-        print('Opção inválida.\n')
+        invalid_option()
 
 def generate_expiration_report():
     '''Lógica do relatória por data de validade'''
@@ -401,33 +398,49 @@ def open_cash_register():
     '''Abertura do caixa'''
     os.system('cls')
     show_subtitle('Abertura de caixa')
-    if supervisor_authentication():
-        cash_register['is_open'] = False
-        cash_register['current_value'] = cash_register['initial_value']
-        print(f'Caixa aberto com sucesso. Valor inicial: R${cash_register['initial_value']:.2f}\n')
-    else:
-        print('Autenticação de supervisor falhou. Operação não autorizada.\n')
+    if cash_register['is_open']:
+        print('O caixa já está aberto. Não é possivel abrir novamente.\n')
+        return_to_main_menu()
+        return
+
+    try:
+        password = input('Digite a senha de supervisor para abrir o caixa: ')
+        if password == SUPERVISOR_PASSWORD:
+            cash_register['is_open'] = True
+            cash_register['current_value'] = cash_register['initial_value']
+            print(f'Caixa aberto com sucesso. Valor inicial: R${cash_register['initial_value']:.2f}\n')
+        else:
+            print('Autenticação de supervisor falhou. Operação não autorizada.\n')
+    except ValueError:
+        invalid_option()
     return_to_main_menu()
 
 def close_cash_register():
     '''Fechamento do caixa'''
     os.system('cls')
     show_subtitle('Fechamento de caixa')
-    if supervisor_authentication():
-        cash_register['is_open'] = True
-        cash_register['current_value'] = 0.00  #pode ser que precise arrumar aqui para o valor do proximo dia ser o mesmo do dia anterior
-        print('Caixa fechado com sucesso.\n')
-    else:
-        print('Autenticação de supervisor falhou. Operação não autorizada.\n')
+    if not cash_register['is_open']:
+        print('O caixa já está fechado. Não é possivel fechar novamente\n')
         return_to_main_menu()
+        return
+    try:
+        password = input('Digite a senha de supervisor para fechar o caixa: ')
+        if password == SUPERVISOR_PASSWORD:
+            add_sale_to_cash()
+            cash_register['is_open'] = False
+            cash_register['current_value'] = cash_register['initial_value']#pode ser que precise arrumar aqui para o valor do proximo dia ser o mesmo do dia anterior
+            print(f'Caixa fechado com sucesso.\n')
+        else:
+            print('Autenticação de supervisor falhou. Operação não autorizada.\n')
+    except ValueError:
+        invalid_option()
+    return_to_main_menu()
 
-def add_sale_to_cash(value):
+def add_sale_to_cash():
     '''Adicionar o valor das vendas ao caixa'''
     if not cash_register['is_open']:
         print('Caixa não está aberto. Abra antes de iniciar as vendas.\n')
         return False
-    cash_register['current_value'] += value
-    return True
 
 def choose_options():
     '''Lê a entrada do usuário e executa a opção escolhida'''
